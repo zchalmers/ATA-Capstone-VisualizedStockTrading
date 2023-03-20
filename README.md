@@ -8,8 +8,6 @@ This project is a web-based stock portfolio management system built using Spring
 
 ### Features
 
-User authentication and authorization
-
 Stock price data visualization in a graph format
 
 Ability to buy and sell stocks
@@ -20,9 +18,10 @@ Unity game application to visualize the stocks in the form of fish in an aquariu
 
 Clicking on a fish in the game allows users to buy more shares of the corresponding stock
 
-Ability to sell the fish that corresponds to the stock
+Ability to sell the fish that corresponds to the stock or to batch sell multiple fish
 
 ### Technologies Used
+
 Spring Boot
 
 AWS DynamoDB
@@ -48,21 +47,21 @@ Unity
 
 ### Usage
 
-Navigate to the homepage of the web application
+1. Navigate to the homepage of the web application
 
-Enter the name of the stock you wish to view and click the "View Stock" button
+2. Enter the name of the stock you wish to view and click the "View Stock" button
 
-Use the graph to analyze the stock data and make a decision to buy or not
+3. Use the graph to analyze the stock data and make a decision to buy or not
 
-If you decide to buy, enter the amount of shares you wish to buy and click "Buy"
+4. If you decide to buy, enter the amount of shares you wish to buy and click "Buy"
 
-Navigate to the portfolio page to view your purchased stocks
+5. Navigate to the portfolio page to view your purchased stocks
 
-Launch the Unity game application to visualize your investments
+6. Launch the Unity game application to visualize your investments
 
-Click on the fish corresponding to a stock to buy more shares
+7. Click on the fish corresponding to a stock to buy more shares
 
-Sell a fish to sell the corresponding stock
+8. Sell a fish to sell the corresponding stock
 
 ### Conclusion
 
