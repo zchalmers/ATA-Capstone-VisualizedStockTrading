@@ -1,40 +1,65 @@
 # ATA-Capstone-Project
 
-Follow the instructions in the course for completing the group Capstone project.
+### Stock Portfolio Manager with Unity Visualization
 
-### Fill out the environment variables
-Complete `setupEnvironment.sh` with the group repo name and the github username of the team member holding the repo.
-Confirm these are in lower case.
-The repo owner should confirm that all team members have been added to collaborate on the repo.
+### Overview
 
-### To create the Lambda Example table in DynamoDB:
+This project is a web-based stock portfolio management system built using Spring Boot and AWS DynamoDB for storage, with Redis caching implemented for performance optimization. The main purpose of the project is to provide users with a platform to buy and sell stocks, view their portfolio, and visualize their investments using a Unity game application that simulates your portfolio as fish in an aquarium.
 
-You must do this for the ServiceLambda to work!
+### Features
 
-```
-aws cloudformation create-stack --stack-name lambda-table --template-body file://LambdaExampleTable.yml --capabilities CAPABILITY_IAM
-```
+User authentication and authorization
+Stock price data visualization in a graph format
+Ability to buy and sell stocks
+Portfolio page to view all purchased stocks
+Unity game application to visualize the stocks in the form of fish in an aquarium
+Clicking on a fish in the game allows users to buy more shares of the corresponding stock
+Ability to sell the fish that corresponds to the stock
+Technologies Used
+Spring Boot
+AWS DynamoDB
+Redis caching
+Unity
+
+### Installation
+
+Clone the repository
+Install the required dependencies
+Set up the AWS DynamoDB credentials and configure the database
+Set up Redis caching
+Run the application
+
+### Usage
+
+Navigate to the homepage of the web application
+Enter the name of the stock you wish to view and click the "View Stock" button
+Use the graph to analyze the stock data and make a decision to buy or not
+If you decide to buy, enter the amount of shares you wish to buy and click "Buy"
+Navigate to the portfolio page to view your purchased stocks
+Launch the Unity game application to visualize your investments
+Click on the fish corresponding to a stock to buy more shares
+Sell a fish to sell the corresponding stock
+
+### Conclusion
+
+This project provides users with a comprehensive platform to manage their stock investments. With its easy-to-use interface, users can quickly analyze stock data, make investment decisions, and visualize their portfolio in a fun and interactive way. By utilizing AWS DynamoDB and Redis caching, the application can handle large amounts of data while maintaining high performance.
+
+
+
+
+
+
+
 
 ### To deploy the Development Environment
-
 Run `./deployDev.sh`
 
-As you are taking a break from work, use the END LAB button in Vocareum instead of removing the pipeline each time.
-The End Lab button will pause the lab and resources, not allowing the budget to be used. When you're ready to start again,
-click the Start Lab button to begin again with renewed AWS credentials.
-
-To tear down the deployment then run `./cleanupDev.sh`
+Navigate to https://localhost:5001/index.html
 
 ### To deploy the CI/CD Pipeline
-
-Fill out `setupEnvironment.sh` with the url of the github repo and the username (in all lowercase) of the 
-team member who is maintaining the repo. Confirm that the team member has added your username as a contributor to the repo.
+Fill out `setupEnvironment.sh` with the url of the github repo and the username.
 
 Run `./createPipeline.sh`
-
-As you are taking a break from work, use the END LAB button in Vocareum instead of removing the pipeline each time.
-The End Lab button will pause the lab and resources, not allowing the budget to be used. When you're ready to start again,
-click the Start Lab button to begin again with renewed AWS credentials.
 
 To teardown the pipeline, run `./cleanupPipeline.sh`
 
